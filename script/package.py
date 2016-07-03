@@ -92,7 +92,7 @@ def main():
     shutil.copytree(os.path.join(LLVM_BUILD_DIR, 'include', 'c++'),
                     os.path.join(pdir, 'include', 'c++'))
 
-  tar_entries = ['bin', 'lib']
+  tar_entries = ['bin', 'lib', 'cr_build_revision']
   if sys.platform == 'darwin':
     tar_entries += ['include']
   with tarfile.open(pdir + '.tgz', 'w:gz') as tar:
