@@ -132,8 +132,7 @@ def main():
   cmake_args = ['-GNinja',
                 '-DCMAKE_BUILD_TYPE=Release',
                 '-DLLVM_ENABLE_ASSERTIONS=ON',
-                '-DLLVM_ENABLE_THREADS=OFF',
-                '-DLLVM_ENABLE_TIMESTAMPS=OFF']
+                '-DLLVM_ENABLE_THREADS=OFF']
   RunCommand(['cmake'] + cmake_args + [LLVM_DIR],
              msvc_arch='x64', env=None)
   RunCommand(['ninja', 'clang'], msvc_arch='x64')
