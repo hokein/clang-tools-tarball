@@ -135,8 +135,7 @@ def main():
                 '-DLLVM_ENABLE_THREADS=OFF']
   RunCommand(['cmake'] + cmake_args + [LLVM_DIR],
              msvc_arch='x64', env=None)
-  RunCommand(['ninja', 'clang'], msvc_arch='x64')
-  RunCommand(['ninja', 'clang-tidy'], msvc_arch='x64')
+  RunCommand(['ninja'], msvc_arch='x64')
   WriteStampFile(CLANG_REVISION)
 
 

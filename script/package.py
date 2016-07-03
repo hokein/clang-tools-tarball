@@ -72,7 +72,9 @@ def main():
 
   want = ['cr_build_revision',
           'lib/clang/*/include/*',
-          'bin/clang-tidy']
+          'bin/clang-tidy',
+          'bin/clang-include-fixer',
+          'bin/find-all-symbols']
 
   for root, dirs, files in os.walk(LLVM_BUILD_DIR):
     # root: third_party/llvm-build/Release+Asserts/lib/..., rel_root: lib/...
