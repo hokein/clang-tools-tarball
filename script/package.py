@@ -11,7 +11,7 @@ import tarfile
 from config import *
 from github import GitHub
 
-GITHUB_REPO = 'hokein/clang-tools-prebuilt'
+GITHUB_REPO = 'hokein/clang-tools-tarball'
 
 def PrintTarProgress(tarinfo):
   print 'Adding', tarinfo.name
@@ -35,8 +35,8 @@ def create_release_draft(github):
 
 
 def auth_token():
-  token = os.environ.get('CLANG_TOOLS_PREBUILT_GITHUB_TOKEN')
-  message = ('Error: Please set the $CLANG_TOOLS_PREBUILT_GITHUB_TOKEN '
+  token = os.environ.get('CLANG_TOOLS_TARBALL_GITHUB_TOKEN')
+  message = ('Error: Please set the $CLANG_TOOLS_TARBALL_GITHUB_TOKEN '
              'environment variable, which is your personal token.')
   assert token, message
   return token
