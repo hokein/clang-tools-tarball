@@ -103,6 +103,8 @@ def main():
     for entry in tar_entries:
       tar.add(os.path.join(pdir, entry), arcname=entry, filter=PrintTarProgress)
 
+  upload_to_github(pdir + '.tgz')
+
 
 if __name__ == '__main__':
   sys.exit(main())
