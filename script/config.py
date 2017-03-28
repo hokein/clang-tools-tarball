@@ -2,7 +2,7 @@
 
 import os
 
-CLANG_REVISION = '275826'
+CLANG_REVISION = '298696'
 LLVM_REPO_URL='https://llvm.org/svn/llvm-project'
 SRC_DIR = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
 LLVM_DIR = os.path.join(SRC_DIR, 'deps', 'llvm-src')
